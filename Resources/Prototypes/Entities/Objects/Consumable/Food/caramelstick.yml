@@ -1,0 +1,33 @@
+- type: entity
+  name: caramel stick
+  parent: FoodInjectableBase
+  id: CaramelStick
+  description: Caramel Stick.
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/caramelstick.rsi
+    state: icon
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 6
+          - ReagentId: Vitamin
+            Quantity: 4
+  - type: MeleeWeapon
+    attackRate: 1.5
+    damage:
+      types:
+        Slash: 6
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+  - type: FlavorProfile
+    flavors:
+      - sweet
+  - type: Item
+    sprite: Objects/Consumable/Food/caramelstick.rsi
+    size: 3
+  - type: Food
+    transferAmount: 1
